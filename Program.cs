@@ -11,11 +11,20 @@ namespace ProgramTaxi
         public string DriverName;
         public bool OnDuty;
         public int NumPassenger;
+        public string Duty;
 
         public void TaxiInfo() 
         {
+            if(OnDuty==true) 
+            {
+                Duty = "Yes";
+            }
+            else 
+            {
+                Duty = "No";
+            }
             Console.WriteLine("Driver Name : " + DriverName);
-            Console.WriteLine("On Duty : " + OnDuty);
+            Console.WriteLine("On Duty : " + Duty);
             Console.WriteLine("Number of Passenger : " + NumPassenger + "\n");
         }
 
@@ -36,7 +45,7 @@ namespace ProgramTaxi
         {
             Taxi taxi = new Taxi();
 
-            taxi.DriverName = "Rama";
+            taxi.DriverName = "Bima";
             taxi.OnDuty = true;
             taxi.NumPassenger = 4;
 
